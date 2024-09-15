@@ -1,0 +1,15 @@
+modules = ["nodejs-20", "web", "bun-1.1"]
+compile = "make install"
+run = "bun run dev"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+build = ["sh", "-c", "make install"]
+run = ["sh", "-c", "bun run dev"]
+
+[[ports]]
+localPort = 5173
+externalPort = 3000
+exposeLocalhost = true
