@@ -1,0 +1,18 @@
+{
+    "$schema": "https://biomejs.dev/schema.json",
+    "formatter": {
+      "enabled": true,
+      "formatWithErrors": true,
+      "indentStyle": "space",
+      "indentSize": 2
+    },
+    "linter": {
+      "enabled": true,
+      "rules": {
+        "semi": "warn",
+        "quotes": ["warn", "double"],
+        "no-unused-vars": "warn"
+      }
+    }
+  }
+  

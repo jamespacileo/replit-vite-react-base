@@ -1,0 +1,31 @@
+# .github/workflows/ci.yml
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Install Bun
+        run: |
+          curl -fsSL https://bun.sh/install | bash
+          export BUN_INSTALL="/root/.bun"
+          export PATH="$BUN_INSTALL/bin:$PATH"
+      - name: Install Dependencies
+        run: bun install
+      - name: Run Lint
+        run: bun run lint
+      - name: Run Tests
+        run: bun run test

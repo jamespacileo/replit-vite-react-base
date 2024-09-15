@@ -16,3 +16,17 @@ This template provides a ready-to-use Vite + React setup with ShadCN ui componen
 | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frudrodip%2Fvite-react-shadcn) | [Demo](https://vite-react-shadcn.vercel.app) | [rds_agi](https://www.twitter.com/rds_agi) |
 
 </div>
+
+
+## Getting Started
+
+### Prerequisites
+
+- **Node.js:** v20.x (LTS)
+- **Bun:** Ensure Bun is installed. [Install Bun](https://bun.sh/)
+- **Docker:** (Optional) For containerization.
+
+### Installation
+
+```bash
+bun install
